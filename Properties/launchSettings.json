@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Printer_Status_Tool_MDI": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
