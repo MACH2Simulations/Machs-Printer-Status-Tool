@@ -15,7 +15,7 @@
     <UseWPF>False</UseWPF>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Machs Printer Status Tool</Title>
-    <Version>1.0.2</Version>
+    <Version>1.0.4</Version>
     <Authors>MACH 2 Simulations</Authors>
     <Description>Machs SNMP Printer Status Tool</Description>
     <Copyright>MACH 2 Simulations 2025</Copyright>
