@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## v1.0.1-refs-tags-v1-0-0.0 (2025-11-24)
+
+## v1.0.0 (2025-11-24)
+
+### Chore
+- :robot: changelog file generated [`b867c6b`](https://github.com/MACH2Simulations/Machs-Printer-Status-Tool/commit/b867c6b)
+
 ## v0.0.1 (2025-11-24)
 
 ### Other
