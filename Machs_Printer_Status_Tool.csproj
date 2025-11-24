@@ -19,10 +19,11 @@
     <Authors>MACH 2 Simulations</Authors>
     <Description>Machs SNMP Printer Status Tool</Description>
     <Copyright>MACH 2 Simulations 2025</Copyright>
-    <PackageProjectUrl>https://docs.m2s.uk/Print_Status</PackageProjectUrl>
+    <PackageProjectUrl>https://docs.m2s.uk/print_status</PackageProjectUrl>
     <AssemblyVersion>$(PackageVersion)</AssemblyVersion>
     <FileVersion>$(PackageVersion)</FileVersion>
     <AssemblyTitle>Machs Printer Status Tool</AssemblyTitle>
+    <RepositoryUrl>https://github.com/MACH2Simulations/Machs-Printer-Status-Tool</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
