@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## v1.0.4 (2025-11-25)
+
+### Chore
+- :robot: changelog file generated [`e5e2f23`](https://github.com/MACH2Simulations/Machs-Printer-Status-Tool/commit/e5e2f23)
+
+### Other
+- Added a Dev mode config flag to allow for documentaion generation as it privates semi sensitve info. [`db5301f`](https://github.com/MACH2Simulations/Machs-Printer-Status-Tool/commit/db5301f)
+
 ## v1.0.3 (2025-11-24)
 
 ### Chore
