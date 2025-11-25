@@ -101,5 +101,6 @@ namespace Printer_Status_Tool_MDI
         public int RefreshTimer { get; set; }
         public string SNMPCommunityString { get; set; }
         public string ShowIP { get; set; }
+        public string DevMode { get; set; }
     }
 }

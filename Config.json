@@ -2,6 +2,7 @@
   {
     "RefreshTimer": 2000,
     "SNMPCommunityString": "public",
-    "ShowIP": "true"
+    "ShowIP": "true", 
+    "DevMode": "true"
   }
 ]

@@ -8,13 +8,13 @@ namespace Printer_Status_Tool_MDI
 {
     public partial class Printer_Status_Tool_Child : Form
     {
-        public string IPb;
+        public string IPb,printer_sn;
         public string mmanu;
         public string frname = "Meow DEF";
         public Dictionary<string, List<string>> snmpData;
         public double K_Toner_Level, K_Toner_Max, K_Toner_Cur, C_Toner_Level, C_Toner_Max, C_Toner_Cur, M_Toner_Level,
                    M_Toner_Max, M_Toner_Cur, Y_Toner_Level, Y_Toner_Max, Y_Toner_Cur, Print_Page_Count, Copy_Page_Count = 0;
-        bool isNamed = false;
+        bool isNamed, isDev = false;
         dynamic Global_config;
         public Printer_Status_Tool_Child(string IP, string manu, string fname, Dictionary<string, List<string>> ssnmpData, dynamic config)
         {
@@ -62,35 +62,33 @@ namespace Printer_Status_Tool_MDI
             Paper_Tray_7.Text = "Tray 7: " + Printer_SNMP.VbList[19].Value.ToString();
             Paper_Tray_8.Text = "Tray 8: " + Printer_SNMP.VbList[20].Value.ToString();
             Paper_Tray_9.Text = "Tray 9): " + Printer_SNMP.VbList[21].Value.ToString();
-            sys_sn.Text = "SN: " + Printer_SNMP.VbList[0].Value.ToString();
-            sys_ip.Text = "IP: " + IPb;
 
-            if (Global_config.ShowIP == "true")
-            {
-                sys_ip.Text = "IP: " + IPb;
-            }
-            else { 
-                sys_ip.Hide();
-            }
+
+
+
+
+
+
+
             if ((!isNamed))
             {
                 if (frname.Contains("SNL"))
                 {
                     var result = Convert.ToInt32(frname.Substring(frname.Length - 1));
-                    string printer_sn = (Printer_SNMP.VbList[0].Value.ToString()).Substring(Printer_SNMP.VbList[0].Value.ToString().Length - result);
+                    printer_sn = (Printer_SNMP.VbList[0].Value.ToString()).Substring(Printer_SNMP.VbList[0].Value.ToString().Length - result);
                     frname = frname.Replace(result.ToString(), "");
                     Useful_Name.Text = frname.Replace("SNL", printer_sn);
                 }
                 else if (frname.Contains("SNF"))
                 {
                     var result = Convert.ToInt32(frname.Substring(frname.Length - 1));
-                    string printer_sn = (Printer_SNMP.VbList[0].Value.ToString()).Substring(0, result);
+                    printer_sn = (Printer_SNMP.VbList[0].Value.ToString()).Substring(0, result);
                     frname = frname.Replace(result.ToString(), "");
                     Useful_Name.Text = frname.Replace("SNF", printer_sn);
                 }
                 else if (frname.Contains("SNA"))
                 {
-                    string printer_sn = (Printer_SNMP.VbList[0].Value.ToString());
+                    printer_sn = (Printer_SNMP.VbList[0].Value.ToString());
                     Useful_Name.Text = frname.Replace("SNA", printer_sn);
                 }
                 else
@@ -139,7 +137,46 @@ namespace Printer_Status_Tool_MDI
                 {
                     Paper_Tray_9.Hide();
                 }
+                isNamed = true;
             }
+
+
+            if (Global_config.ShowIP == "true")
+            {
+                if(Global_config.DevMode == "false")
+                {
+                    sys_ip.Text = "IP: " + IPb;
+                }
+                
+            }
+            else
+            {
+                sys_ip.Hide();
+            }
+            if (Global_config.DevMode == "true" && isDev == false)
+            {
+                
+                printer_sn = "SN: PrtSGFUDJ" + RandomString(8);
+                sys_sn.Text = printer_sn;
+                sys_ip.Text = "IP: 127.0.0.xxx";
+                
+                Thread.Sleep(500);
+                sys_ip.Show();
+
+                //var result = Convert.ToInt32(frname.Substring(frname.Length - 1));
+                printer_sn = printer_sn.Substring(printer_sn.Length - 5);
+                Useful_Name.Text = frname.Replace("SNL", printer_sn);
+                isDev = true;
+
+            }
+            else if (Global_config.DevMode == "false")
+            {
+                sys_sn.Text = "SN: " + Printer_SNMP.VbList[0].Value.ToString();
+                sys_ip.Text = "IP: " + IPb;
+                printer_sn = "";
+            }
+
+
             System_Last_Update_Time.Text = "Last Update Time: " + DateTime.Now.ToString("HH:mm:ss");
         }
         public static Pdu GetSnmpData(string ipAddress, string manu, Dictionary<string, List<string>> snmpData, dynamic Global_config)
@@ -205,5 +242,22 @@ namespace Printer_Status_Tool_MDI
         {
 
         }
+
+
+
+
+        // Source - https://stackoverflow.com/a
+        // Posted by dtb, modified by community. See post 'Timeline' for change history
+        // Retrieved 2025-11-25, License - CC BY-SA 4.0
+
+        private static Random random = new Random();
+
+        public static string RandomString(int length)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+        //End of code from stackoverflow
     }
 }
