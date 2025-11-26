@@ -15,7 +15,7 @@
     <UseWPF>False</UseWPF>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Machs Printer Status Tool</Title>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
     <Authors>MACH 2 Simulations</Authors>
     <Description>Machs SNMP Printer Status Tool</Description>
     <Copyright>MACH 2 Simulations 2025</Copyright>
@@ -27,11 +27,11 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DebugType>embedded</DebugType>
+    <DebugType>none</DebugType>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DebugType>embedded</DebugType>
+    <DebugType>none</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
