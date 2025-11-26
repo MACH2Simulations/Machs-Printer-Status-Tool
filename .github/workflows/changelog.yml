@@ -1,4 +1,7 @@
 name: Create Change Log
+permissions:
+  contents: write
+  pull-requests: write
 on:
   workflow_run:
     workflows: ["build"]
