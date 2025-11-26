@@ -158,7 +158,7 @@
             // 
             Printer_Status.AutoSize = true;
             Printer_Status.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Printer_Status.Location = new Point(2, 148);
+            Printer_Status.Location = new Point(2, 150);
             Printer_Status.Name = "Printer_Status";
             Printer_Status.Size = new Size(135, 16);
             Printer_Status.TabIndex = 11;
@@ -278,7 +278,7 @@
             // 
             sys_sn.AutoSize = true;
             sys_sn.Font = new Font("Arial", 6F, FontStyle.Bold);
-            sys_sn.Location = new Point(223, 260);
+            sys_sn.Location = new Point(221, 260);
             sys_sn.Name = "sys_sn";
             sys_sn.Size = new Size(81, 10);
             sys_sn.TabIndex = 23;
