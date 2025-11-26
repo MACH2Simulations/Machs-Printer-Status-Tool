@@ -152,7 +152,7 @@
             Total_Page_Count.Size = new Size(119, 14);
             Total_Page_Count.TabIndex = 10;
             Total_Page_Count.Text = "Page Count xxxxxxxxx";
-            Total_Page_Count.TextAlign = ContentAlignment.TopRight;
+            Total_Page_Count.TextAlign = ContentAlignment.MiddleRight;
             // 
             // Printer_Status
             // 
@@ -278,7 +278,7 @@
             // 
             sys_sn.AutoSize = true;
             sys_sn.Font = new Font("Arial", 6F, FontStyle.Bold);
-            sys_sn.Location = new Point(221, 260);
+            sys_sn.Location = new Point(208, 260);
             sys_sn.Name = "sys_sn";
             sys_sn.Size = new Size(81, 10);
             sys_sn.TabIndex = 23;
@@ -289,7 +289,7 @@
             // 
             sys_ip.AutoSize = true;
             sys_ip.Font = new Font("Arial", 6F, FontStyle.Bold);
-            sys_ip.Location = new Point(109, 260);
+            sys_ip.Location = new Point(126, 260);
             sys_ip.Name = "sys_ip";
             sys_ip.Size = new Size(76, 10);
             sys_ip.TabIndex = 24;
