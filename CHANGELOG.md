@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## Unreleased changes
+
+### Other
+- Update changelog.yml [`909fb41`](https://github.com/MACH2Simulations/Machs-Printer-Status-Tool/commit/909fb41)
+
+## v1.0.5 (2025-11-26)
+
+### Chore
+- :robot: changelog file generated [`690ee18`](https://github.com/MACH2Simulations/Machs-Printer-Status-Tool/commit/690ee18)
+
+### Other
+- More Formatting Updates [`aa56e2d`](https://github.com/MACH2Simulations/Machs-Printer-Status-Tool/commit/aa56e2d)
+- Formatting and Font Changes [`5f9a88a`](https://github.com/MACH2Simulations/Machs-Printer-Status-Tool/commit/5f9a88a)
+- Build config change to (try) to get it to embed file name [`6d8dcdf`](https://github.com/MACH2Simulations/Machs-Printer-Status-Tool/commit/6d8dcdf)
+
 ## v1.0.4 (2025-11-25)
 
 ### Chore
